@@ -18,9 +18,7 @@ function App() {
   const [players] = useFetchData([])
   const [showPlayers, setShowPlayers] = useState(false)
 
-
-
-  console.log(players)
+  // console.log(players)
 
   return (
     <div className="App">
