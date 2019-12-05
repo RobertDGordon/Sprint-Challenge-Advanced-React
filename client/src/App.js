@@ -1,11 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {useFetchData} from './hooks/useFetchData'
+
+import PlayerCard from './components/PlayerCard'
 
 import './App.css';
 
 function App() {
 
-  const [players, setPlayers] = useFetchData([])
+  const [players] = useFetchData([])
+  const [showPlayers, setShowPlayers] = useState(false)
 
 
 
@@ -13,8 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
+        <h1>Women's World Cup</h1>
+        <button onClick={()=>{setShowPlayers(!showPlayers)}}>Show the players</button>
       </header>
+      <div>
+        {!showPlayers ? <></> : <div>{players.map(player =>{return <PlayerCard key={player.id} {...player} />})}</div>}
+      </div>
     </div>
   );
 }
