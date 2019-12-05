@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Women's World Cup</h1>
-        <Chart />
+        <Chart players={players} />
         <button onClick={()=>{setShowPlayers(!showPlayers)}}>Show the players</button>
       </header>
       <Cards>
