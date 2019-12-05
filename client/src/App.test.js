@@ -49,3 +49,18 @@ it('Fires show players button', () => {
 
   expect(showPlayersButton)
 })
+
+// it('Renders show the chart button', () =>{
+//   const wrapper = render(<App />);
+//   expect(wrapper.getByText(/show the chart/i))
+// })
+
+// it('Fires show chart button', () => {
+
+//   const { getByText } =  render(<App />);
+//   const showChartButton = getByText(/show the chart/i);
+
+//   fireEvent.click(showChartButton)
+
+//   expect(showChartButton)
+// })

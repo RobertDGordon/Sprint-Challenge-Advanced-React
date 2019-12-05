@@ -16,7 +16,11 @@ const useChartData = (props) =>{
     const playerNames = () =>{
         let names = []
         for (let i = 0; i < howManyToShow; i++){
-            names.push(props[i].name)
+            if (props === undefined){
+                return ''
+            }else{
+                names.push(props[i].name)
+            }
         }
         // console.log(names)
         return names

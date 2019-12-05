@@ -27,9 +27,9 @@ function App() {
       <header>
         <h1>Women's World Cup</h1>
         <button onClick={()=>{setShowChart(!showChart)}}>Show the chart</button>
-        {!showChart ? <></> : <Chart players={players} />}
         <button onClick={()=>{setShowPlayers(!showPlayers)}}>Show the players</button>
       </header>
+      {!showChart ? <></> : <Chart players={players} />}
       <Cards>
         {!showPlayers ? <></> : players.map(player =>{return <PlayerCard key={player.id} {...player} />})}
       </Cards>
