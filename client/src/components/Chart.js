@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
+import useChartData from '../hooks/useChartData'
 import {Pie} from 'react-chartjs-2';
 
 const Chart = (props) => {
 
-    const chartData = {
-        chartData:{
-            labels: ['Test1','Test2'],
-            datasets:[
-                {
-                    label: 'Searches',
-                    data: [100,99,10,3,4],
-                    backgroundColor: []
-                }
-            ]
-        }
-    }
+    const players = props.players
+
+    // console.log(players)
+
+    const [chartData, setChartData] = useChartData(players);
+
+    // const chartData = {
+    //     chartData:{
+    //         labels: ['Test1','Test2'],
+    //         datasets:[
+    //             {
+    //                 label: 'Searches',
+    //                 data: [100,99,10,3,4],
+    //                 backgroundColor: []
+    //             }
+    //         ]
+    //     }
+    // }
 
     return(
         <div><Pie

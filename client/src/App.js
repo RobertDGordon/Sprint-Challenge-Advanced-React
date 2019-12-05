@@ -18,6 +18,7 @@ function App() {
 
   const [players] = useFetchData([])
   const [showPlayers, setShowPlayers] = useState(false)
+  const [showChart, setShowChart] = useState(false)
 
   // console.log(players)
 
@@ -25,7 +26,8 @@ function App() {
     <div className="App">
       <header>
         <h1>Women's World Cup</h1>
-        <Chart players={players} />
+        <button onClick={()=>{setShowChart(!showChart)}}>Show the chart</button>
+        {!showChart ? <></> : <Chart players={players} />}
         <button onClick={()=>{setShowPlayers(!showPlayers)}}>Show the players</button>
       </header>
       <Cards>
