@@ -17,7 +17,11 @@ const Card = styled.div`
     background-color: white;
     border: 1px solid grey;
     border-radius: 5px;
-    color: darkgray;
+    color: gray;
+    span{
+        font-weight: bold;
+        color: darkgreen;
+    }
 
 `
 
@@ -27,8 +31,6 @@ const PlayerCard = (props) => {
 
     return(
         <>
-        {/* {test = `${props.id}s`}
-        {console.log(test)} */}
         <Card>
             <p><span>Name:</span> {props.name}</p>
             <p><span>Country:</span> {props.country}</p>
