@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useFetchData} from './hooks/useFetchData'
 
 import PlayerCard from './components/PlayerCard'
+import Chart from './components/Chart'
 
 import styled from 'styled-components'
 import './App.css';
@@ -24,6 +25,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Women's World Cup</h1>
+        <Chart />
         <button onClick={()=>{setShowPlayers(!showPlayers)}}>Show the players</button>
       </header>
       <Cards>
