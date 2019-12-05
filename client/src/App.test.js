@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import PlayerCard from './components/PlayerCard'
+import Chart from './components/Chart'
+
+import {Pie} from 'react-chartjs-2';
+import styled from 'styled-components';
 
 import {render, fireEvent} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
@@ -25,6 +29,11 @@ it('Expects Players to be defined', () =>{
 it('Renders PlayerCard without crashing',() =>{
   render(<PlayerCard />)
 })
+
+// it('Expects Chart to be defined', () =>{
+//   const chart = <Chart />;
+//   expect(chart).toBeDefined();
+// })
 
 it('Renders show the players button', () =>{
   const wrapper = render(<App />);

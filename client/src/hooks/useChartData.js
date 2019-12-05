@@ -9,7 +9,7 @@ const useChartData = (props) =>{
         for(let i = 0; i < howManyToShow; i++){
             colors.push('#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6),) 
         }
-        console.log(colors)
+        // console.log(colors)
         return colors
     }
 
@@ -18,8 +18,17 @@ const useChartData = (props) =>{
         for (let i = 0; i < howManyToShow; i++){
             names.push(props[i].name)
         }
-        console.log(names)
+        // console.log(names)
         return names
+    }
+
+    const playerSearches = () =>{
+        let searches = []
+        for (let i = 0; i < howManyToShow; i++){
+            searches.push(props[i].searches)
+        }
+        // console.log(searches)
+        return searches
     }
 
     const initialValue = {
@@ -28,14 +37,14 @@ const useChartData = (props) =>{
             datasets:[
                 {
                     label: 'Searches',
-                    data: [props[0].searches, props[1].searches,props[2].searches,3,4],
+                    data: playerSearches(),
                     backgroundColor: randomColors()
                 }
             ]
         }
     }
 
-    const [chartData, setChartData] = useState(initialValue);
+    const [chartData] = useState(initialValue);
 
     return [chartData];
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import useChartData from '../hooks/useChartData'
 import {Pie} from 'react-chartjs-2';
 
@@ -27,7 +27,7 @@ const Chart = (props) => {
         <div><Pie
         data={chartData.chartData}
         width={1200}
-        height={500}
+        height={600}
         options={{
             title:{
                 display:true,
