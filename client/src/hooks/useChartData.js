@@ -13,9 +13,18 @@ const useChartData = (props) =>{
         return colors
     }
 
+    const playerNames = () =>{
+        let names = []
+        for (let i = 0; i < howManyToShow; i++){
+            names.push(props[i].name)
+        }
+        console.log(names)
+        return names
+    }
+
     const initialValue = {
         chartData:{
-            labels: [props[0].name,props[1].name],
+            labels: playerNames(),
             datasets:[
                 {
                     label: 'Searches',
